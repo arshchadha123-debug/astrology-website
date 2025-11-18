@@ -7,63 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* WhatsApp floating button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: #fff;
-            border-radius: 50%;
-            width: 58px;
-            height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 22px #47ffbc55;
-            z-index: 1000;
-            cursor: pointer;
-            font-size: 2.1em;
-            transition: background 0.2s;
-            border: none;
+        .about-photo {
+            width:120px; height:120px; object-fit:cover; border-radius:50%; margin-right:2em; box-shadow: 0 4px 16px #bca0f42f;
         }
-        .whatsapp-btn:hover {
-            background: #128C7E;
+        .consult-img {
+            width:60px;height:60px;margin-bottom:13px;border-radius:12px;object-fit:cover;box-shadow:0 3px 8px #8883;
         }
-        .whatsapp-btn svg {
-            width: 32px;
-            height: 32px;
+        .testimonial-img {
+            width:38px;height:38px;object-fit:cover;border-radius:50%;border:2px solid #ffe670;margin-bottom:8px;
         }
-        /* Add margin for the floating button so it never overlaps footer on mobile */
-        @media (max-width: 600px) {
-            .whatsapp-btn { bottom: 16px; right: 16px; }
+        .sky-bg {
+            position: absolute;
+            left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.20;
         }
-        /* Testimonial Section Custom */
-        .testimonial-section { text-align: center; }
-        .testimonial-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-            justify-content: center;
-        }
-        .testimonial-cards blockquote {
-            background: #efe4ff;
-            border-radius: 16px;
-            padding: 1.3em 1.7em;
-            font-style: italic;
-            color: #4c4075;
-            border-left: 6px solid #ffe670;
-            max-width: 350px;
-            min-width: 240px;
-            margin: 0;
-            box-shadow: 0 5px 22px #7d68b10c;
-        }
-        .testimonial-cards footer {
-            color: #8d66ca;
-            font-size: 0.96em;
-            font-style: normal;
-            margin-top: 1em;
-        }
+        .hero-content { position: relative; z-index: 1;}
+        .faq-card.card {display:flex;align-items:flex-start;gap:2em;}
+        @media (max-width:800px){.faq-card.card{flex-direction:column;align-items:flex-start;gap:1em;}.about-photo{margin-right:0;}}
     </style>
 </head>
 <body>
@@ -73,7 +32,8 @@
     </a>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="position: relative; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80" class="sky-bg" alt="Night sky" />
         <div class="hero-content">
             <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/leo.svg" class="hero-icon" alt="Astrologer Icon" />
             <h1>Astrologer <span class="brand">Sejal Chadha</span></h1>
@@ -100,41 +60,44 @@
     </nav>
 
     <main>
-        <!-- About Section - personalized -->
+        <!-- About Section - with image -->
         <section id="about-faq" class="section">
             <h2 class="section-title">About Sejal Chadha</h2>
             <div class="faq-card card">
-                <p>
-                    <b>Sejal Chadha</b> is a caring, insightful astrologer and consultant with years of experience guiding individuals and families through life's turning points. Known for her compassionate approach, Sejal offers a blend of modern insights and traditional wisdom—helping clients discover clarity, confidence, and peace.<br><br>
-                    Her expertise includes <b>Personal Horoscope Readings</b>, <b>Tarot Card Consultations</b>, <b>Vastu Advice</b>, and <b>Matchmaking Guidance</b>. Whether you seek answers about career, relationships, health, or life's direction, Sejal combines ancient sciences with empathy to support your unique journey.
-                </p>
-                <p>
-                    <b>Contact her today at <a href="tel:+919873040392">+91 9873040392</a> or <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">WhatsApp</a> to start your consultation, or explore offerings below.</b>
-                </p>
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="about-photo" alt="Sejal Chadha Portrait" />
+                <div>
+                    <p>
+                        <b>Sejal Chadha</b> is a caring, insightful astrologer and consultant with years of experience guiding individuals and families through life's turning points. Known for her compassionate approach, Sejal offers a blend of modern insights and traditional wisdom—helping clients discover clarity, confidence, and peace.<br><br>
+                        Her expertise includes <b>Personal Horoscope Readings</b>, <b>Tarot Card Consultations</b>, <b>Vastu Advice</b>, and <b>Matchmaking Guidance</b>. Whether you seek answers about career, relationships, health, or life's direction, Sejal combines ancient sciences with empathy to support your unique journey.
+                    </p>
+                    <p>
+                        <b>Contact her today at <a href="tel:+919873040392">+91 9873040392</a> or <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">WhatsApp</a> to start your consultation, or explore offerings below.</b>
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Consultations Section -->
+        <!-- Consultations Section with themed images/icons -->
         <section id="consultations" class="section">
             <h2 class="section-title">Consultation & Services</h2>
             <div class="zodiac-grid">
                 <div class="zodiac-card">
-                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/cancer.svg" alt="Personal Reading" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/482/482467.png" class="consult-img" alt="Personal Reading" />
                     <h3>Personal Horoscope Reading</h3>
                     <p>Get in-depth analysis of your birth chart for guidance in life, career, and relationships.</p>
                 </div>
                 <div class="zodiac-card">
-                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/libra.svg" alt="Tarot" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721610.png" class="consult-img" alt="Tarot" />
                     <h3>Tarot Card Consultation</h3>
                     <p>Find answers to specific questions and gain clarity through intuitive tarot card sessions.</p>
                 </div>
                 <div class="zodiac-card">
-                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/virgo.svg" alt="Vastu" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/6169/6169400.png" class="consult-img" alt="Vastu" />
                     <h3>Vastu Consultation</h3>
                     <p>Improve your home's harmony and prosperity with expert Vastu advice and remedies.</p>
                 </div>
                 <div class="zodiac-card">
-                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/gemini.svg" alt="Matchmaking" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721626.png" class="consult-img" alt="Matchmaking" />
                     <h3>Matchmaking</h3>
                     <p>Get horoscope-matching and relationship guidance for marriage and partnerships.</p>
                 </div>
@@ -146,30 +109,34 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section with client images -->
         <section id="testimonials" class="section testimonial-section">
             <h2 class="section-title">What Clients Say</h2>
             <div class="testimonial-cards">
                 <blockquote>
+                    <img src="https://randomuser.me/api/portraits/women/81.jpg" class="testimonial-img" alt="Priya Sharma" />
                     "Sejal ji's warmth and knowledge made my horoscope reading truly eye-opening. Highly recommended!"
                     <footer>— Priya Sharma</footer>
                 </blockquote>
                 <blockquote>
+                    <img src="https://randomuser.me/api/portraits/men/42.jpg" class="testimonial-img" alt="Amit Kapoor" />
                     "Thanks to Sejal, my family’s Vastu consultation brought real peace to our home!"
                     <footer>— Amit Kapoor</footer>
                 </blockquote>
                 <blockquote>
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" class="testimonial-img" alt="Neha Verma" />
                     "Her tarot insights helped me move forward during a difficult time. She really cares."
                     <footer>— Neha Verma</footer>
                 </blockquote>
                 <blockquote>
+                    <img src="https://randomuser.me/api/portraits/men/46.jpg" class="testimonial-img" alt="Sunil Mehra" />
                     "Professional, patient, and truly gifted in matchmaking guidance.”
                     <footer>— Sunil Mehra</footer>
                 </blockquote>
             </div>
         </section>
 
-        <!-- Horoscope Section -->
+        <!-- Horoscope Section (for brevity, left largely unchanged) -->
         <section id="horoscopes" class="section">
             <h2 class="section-title">Find Your Horoscope</h2>
             <div class="horoscope-widget card">
@@ -193,11 +160,10 @@
             </div>
         </section>
 
-        <!-- Zodiac Overview -->
+        <!-- Zodiac Overview (kept as icons) -->
         <section id="zodiac-overview" class="section">
             <h2 class="section-title">Zodiac Signs</h2>
             <div class="zodiac-grid">
-                <!-- Zodiac Cards (12 signs, see previous implementation for all) -->
                 <div class="zodiac-card">
                     <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/aries.svg" alt="Aries" />
                     <h3>Aries</h3>
@@ -272,6 +238,8 @@
                 <div id="contact-message" class="form-message"></div>
             </form>
             <div style="text-align:center; margin-top:1em;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135781.png" alt="Contact" style="width:40px;margin-bottom:10px;">
+                <br>
                 <a href="tel:+919873040392" class="hero-cta" style="font-size:1em;">Call Directly: +91 9873040392</a>
                 <span style="margin:0 1em; color:#614385; font-weight:700;">or</span>
                 <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="hero-cta" style="background:#25D366;font-size:1em; color:#fff;">WhatsApp</a>
