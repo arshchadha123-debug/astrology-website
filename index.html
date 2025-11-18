@@ -3,38 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>AstroSphere - Discover Your Stars</title>
+    <title>Sejal Chadha – Astrology & Consultation</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* WhatsApp floating button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 22px #47ffbc55;
+            z-index: 1000;
+            cursor: pointer;
+            font-size: 2.1em;
+            transition: background 0.2s;
+            border: none;
+        }
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+        .whatsapp-btn svg {
+            width: 32px;
+            height: 32px;
+        }
+        /* Add margin for the floating button so it never overlaps footer on mobile */
+        @media (max-width: 600px) {
+            .whatsapp-btn { bottom: 16px; right: 16px; }
+        }
+        /* Testimonial Section Custom */
+        .testimonial-section { text-align: center; }
+        .testimonial-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+        .testimonial-cards blockquote {
+            background: #efe4ff;
+            border-radius: 16px;
+            padding: 1.3em 1.7em;
+            font-style: italic;
+            color: #4c4075;
+            border-left: 6px solid #ffe670;
+            max-width: 350px;
+            min-width: 240px;
+            margin: 0;
+            box-shadow: 0 5px 22px #7d68b10c;
+        }
+        .testimonial-cards footer {
+            color: #8d66ca;
+            font-size: 0.96em;
+            font-style: normal;
+            margin-top: 1em;
+        }
+    </style>
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C9.373 3 4 8.373 4 15c0 2.656.824 5.09 2.225 7.096L4 29l7.177-2.18A12.942 12.942 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0-1c7.18 0 13 5.82 13 13 0 7.18-5.82 13-13 13-2.505 0-4.847-.73-6.822-2.006l-.477-.316-5.701 1.732a1 1 0 0 1-1.257-1.257l1.732-5.701-.316-.477C2.73 19.847 2 17.505 2 15 2 6.82 8.82 0 16 0zm7.056 19.278c-.31.874-1.642 1.598-2.242 1.704-.599.106-1.336.151-2.202-.138-.506-.163-1.159-.377-2.077-.784-1.839-.794-3.022-2.556-3.117-2.679s-.444-.593-.444-1.128c0-.533.266-.797.359-.904.093-.108.206-.135.276-.146.069-.012.145-.018.221-.018.074 0 .162-.01.252.009.093.02.218.089.342.328.124.238.421.822.459.883.037.061.073.129.134.209.06.08.119.138.186.224.066.086.152.183.244.3.092.116.195.175.314.139.119-.035.487-.177.927-.579.44-.403.469-.445.66-.403a.537.537 0 0 1 .38.324c.106.219.363.531.445.641.082.111.165.123.266.161s.668.33.779.378c.111.048.185.081.265.13.08.049.138.107.168.17z"></path></svg>
+    </a>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/gemini.svg" class="hero-icon" alt="Zodiac Icon" />
-            <h1>Welcome to <span class="brand">AstroSphere</span></h1>
-            <p class="hero-tagline">Discover horoscopes, compatibility, and more under the cosmic sky.</p>
-            <a href="#horoscopes" class="hero-cta">Explore Your Horoscope</a>
+            <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/leo.svg" class="hero-icon" alt="Astrologer Icon" />
+            <h1>Astrologer <span class="brand">Sejal Chadha</span></h1>
+            <p class="hero-tagline">
+                Trusted Guidance for Your Journey • Personal Readings • Tarot • Vastu • Matchmaking
+            </p>
+            <a href="tel:+919873040392" class="hero-cta">Call for Consultation: +91 9873040392</a>
         </div>
     </section>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-flex">
-            <div class="nav-brand">AstroSphere</div>
+            <div class="nav-brand">Sejal Chadha</div>
             <ul class="nav-links">
+                <li><a href="#about-faq">About</a></li>
+                <li><a href="#consultations">Consultations</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#horoscopes">Horoscopes</a></li>
                 <li><a href="#zodiac-overview">Zodiac Signs</a></li>
-                <li><a href="#compatibility">Compatibility</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about-faq">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
+        <!-- About Section - personalized -->
+        <section id="about-faq" class="section">
+            <h2 class="section-title">About Sejal Chadha</h2>
+            <div class="faq-card card">
+                <p>
+                    <b>Sejal Chadha</b> is a caring, insightful astrologer and consultant with years of experience guiding individuals and families through life's turning points. Known for her compassionate approach, Sejal offers a blend of modern insights and traditional wisdom—helping clients discover clarity, confidence, and peace.<br><br>
+                    Her expertise includes <b>Personal Horoscope Readings</b>, <b>Tarot Card Consultations</b>, <b>Vastu Advice</b>, and <b>Matchmaking Guidance</b>. Whether you seek answers about career, relationships, health, or life's direction, Sejal combines ancient sciences with empathy to support your unique journey.
+                </p>
+                <p>
+                    <b>Contact her today at <a href="tel:+919873040392">+91 9873040392</a> or <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">WhatsApp</a> to start your consultation, or explore offerings below.</b>
+                </p>
+            </div>
+        </section>
+
+        <!-- Consultations Section -->
+        <section id="consultations" class="section">
+            <h2 class="section-title">Consultation & Services</h2>
+            <div class="zodiac-grid">
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/cancer.svg" alt="Personal Reading" />
+                    <h3>Personal Horoscope Reading</h3>
+                    <p>Get in-depth analysis of your birth chart for guidance in life, career, and relationships.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/libra.svg" alt="Tarot" />
+                    <h3>Tarot Card Consultation</h3>
+                    <p>Find answers to specific questions and gain clarity through intuitive tarot card sessions.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/virgo.svg" alt="Vastu" />
+                    <h3>Vastu Consultation</h3>
+                    <p>Improve your home's harmony and prosperity with expert Vastu advice and remedies.</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/gemini.svg" alt="Matchmaking" />
+                    <h3>Matchmaking</h3>
+                    <p>Get horoscope-matching and relationship guidance for marriage and partnerships.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin:1em 0;">
+                <a href="tel:+919873040392" class="hero-cta" style="font-size:1em;">Call Now to Book: +91 9873040392</a>
+                <span style="margin:0 1em; color:#614385; font-weight:700;">or</span>
+                <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="hero-cta" style="background:#25D366;font-size:1em; color:#fff;">WhatsApp Sejal</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonial-section">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonial-cards">
+                <blockquote>
+                    "Sejal ji's warmth and knowledge made my horoscope reading truly eye-opening. Highly recommended!"
+                    <footer>— Priya Sharma</footer>
+                </blockquote>
+                <blockquote>
+                    "Thanks to Sejal, my family’s Vastu consultation brought real peace to our home!"
+                    <footer>— Amit Kapoor</footer>
+                </blockquote>
+                <blockquote>
+                    "Her tarot insights helped me move forward during a difficult time. She really cares."
+                    <footer>— Neha Verma</footer>
+                </blockquote>
+                <blockquote>
+                    "Professional, patient, and truly gifted in matchmaking guidance.”
+                    <footer>— Sunil Mehra</footer>
+                </blockquote>
+            </div>
+        </section>
 
         <!-- Horoscope Section -->
         <section id="horoscopes" class="section">
@@ -64,7 +197,7 @@
         <section id="zodiac-overview" class="section">
             <h2 class="section-title">Zodiac Signs</h2>
             <div class="zodiac-grid">
-                <!-- Repeat this for all zodiac signs -->
+                <!-- Zodiac Cards (12 signs, see previous implementation for all) -->
                 <div class="zodiac-card">
                     <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/aries.svg" alt="Aries" />
                     <h3>Aries</h3>
@@ -128,136 +261,28 @@
             </div>
         </section>
 
-        <!-- Compatibility Checker -->
-        <section id="compatibility" class="section">
-            <h2 class="section-title">Compatibility Checker</h2>
-            <form class="card flex-col" onsubmit="checkCompatibility(event)">
-                <div>
-                    <label>Your Sign:</label>
-                    <select id="sign1" required>
-                        <option>Aries</option><option>Taurus</option><option>Gemini</option>
-                        <option>Cancer</option><option>Leo</option><option>Virgo</option>
-                        <option>Libra</option><option>Scorpio</option><option>Sagittarius</option>
-                        <option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Partner's Sign:</label>
-                    <select id="sign2" required>
-                        <option>Aries</option><option>Taurus</option><option>Gemini</option>
-                        <option>Cancer</option><option>Leo</option><option>Virgo</option>
-                        <option>Libra</option><option>Scorpio</option><option>Sagittarius</option>
-                        <option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
-                    </select>
-                </div>
-                <button type="submit" class="compat-btn">Check</button>
-                <div id="compatibility-result" class="compatibility-result"></div>
-            </form>
-        </section>
-
-        <!-- Blog/Articles -->
-        <section id="blog" class="section">
-            <h2 class="section-title">Astrology Insights & Articles</h2>
-            <div class="blog-grid">
-                <article class="card blog-card">
-                    <h3>What Really is a Birth Chart?</h3>
-                    <p>Discover the cosmic map drawn at your exact birth moment and what it means for you.</p>
-                </article>
-                <article class="card blog-card">
-                    <h3>Mercury Retrograde Survival Guide</h3>
-                    <p>Navigating technology fails, communication challenges, and making the most of the cosmos.</p>
-                </article>
-                <article class="card blog-card">
-                    <h3>Your Moon Sign Explained</h3>
-                    <p>Why your moon sign is just as important as your sun sign for your emotional world.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- About/FAQ Section -->
-        <section id="about-faq" class="section">
-            <h2 class="section-title">About Astrology</h2>
-            <div class="faq-card card">
-                <p><b>AstroSphere</b> is all about connecting you with the rhythms of the universe.</p>
-                <details>
-                    <summary>What is astrology?</summary>
-                    <p>Astrology is the ancient study of how celestial bodies influence life on Earth.</p>
-                </details>
-                <details>
-                    <summary>How accurate is astrology?</summary>
-                    <p>Astrology offers insight and guidance—your path is always your own to choose.</p>
-                </details>
-                <details>
-                    <summary>Can I get a personal reading?</summary>
-                    <p>Coming soon! Check back for updates on personalized readings and reports.</p>
-                </details>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="section">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">Contact Sejal Chadha</h2>
             <form class="card contact-form" onsubmit="submitContact(event)">
                 <input type="text" id="name" placeholder="Your Name" required>
                 <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <textarea id="message" placeholder="How can Sejal help you?" required></textarea>
                 <button type="submit">Send Message</button>
                 <div id="contact-message" class="form-message"></div>
             </form>
-        </section>
-
-        <!-- Newsletter -->
-        <section id="newsletter" class="section">
-            <h2 class="section-title">Join Our Cosmic Newsletter</h2>
-            <form class="newsletter-form card" onsubmit="subscribeNewsletter(event)">
-                <input type="email" id="newsletter-email" placeholder="Email Address" required>
-                <button type="submit">Subscribe</button>
-                <div id="newsletter-message" class="form-message"></div>
-            </form>
-        </section>
-
-        <!-- Transits/Calendar -->
-        <section id="transits" class="section">
-            <h2 class="section-title">Upcoming Planetary Transits</h2>
-            <ul class="calendar-list">
-                <li><b>🌕 Nov 27</b> — Full Moon in Gemini</li>
-                <li><b>🔄 Dec 1–21</b> — Mercury Retrograde</li>
-                <li><b>🔥 Nov 12</b> — Mars enters Scorpio</li>
-            </ul>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="section testimonial-section">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="testimonial-cards">
-                <blockquote>
-                    <p>"AstroSphere's daily horoscopes keep me motivated every morning."</p>
-                    <footer>— Alex J.</footer>
-                </blockquote>
-                <blockquote>
-                    <p>"The compatibility checker is so much fun and surprisingly spot on!"</p>
-                    <footer>— Priya D.</footer>
-                </blockquote>
+            <div style="text-align:center; margin-top:1em;">
+                <a href="tel:+919873040392" class="hero-cta" style="font-size:1em;">Call Directly: +91 9873040392</a>
+                <span style="margin:0 1em; color:#614385; font-weight:700;">or</span>
+                <a href="https://wa.me/919873040392?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="hero-cta" style="background:#25D366;font-size:1em; color:#fff;">WhatsApp</a>
             </div>
-        </section>
-
-        <!-- Calculator -->
-        <section id="calculator" class="section">
-            <h2 class="section-title">Astrology Calculator</h2>
-            <form class="card calc-form" onsubmit="calculateChart(event)">
-                <input type="date" id="birth-date" required>
-                <input type="time" id="birth-time" required>
-                <input type="text" id="birth-place" placeholder="Place of Birth" required>
-                <button type="submit">Calculate</button>
-                <div id="calculator-result" class="form-message"></div>
-            </form>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            &copy; 2025 AstroSphere. All rights reserved.
+            &copy; 2025 Sejal Chadha. All rights reserved.
         </div>
     </footer>
     <script src="script.js"></script>
