@@ -2,29 +2,264 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrology Website</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>AstroSphere - Discover Your Stars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Astrology Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Horoscopes</a></li>
-                <li><a href="#">About</a></li>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/gemini.svg" class="hero-icon" alt="Zodiac Icon" />
+            <h1>Welcome to <span class="brand">AstroSphere</span></h1>
+            <p class="hero-tagline">Discover horoscopes, compatibility, and more under the cosmic sky.</p>
+            <a href="#horoscopes" class="hero-cta">Explore Your Horoscope</a>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="nav-brand">AstroSphere</div>
+            <ul class="nav-links">
+                <li><a href="#horoscopes">Horoscopes</a></li>
+                <li><a href="#zodiac-overview">Zodiac Signs</a></li>
+                <li><a href="#compatibility">Compatibility</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about-faq">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <section class="intro">
-            <h2>Welcome!</h2>
-            <p>This is your blank starter for an astrology website. Start adding your content here!</p>
+
+        <!-- Horoscope Section -->
+        <section id="horoscopes" class="section">
+            <h2 class="section-title">Find Your Horoscope</h2>
+            <div class="horoscope-widget card">
+                <div>
+                    <label for="period">Period:</label>
+                    <select id="period">
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+                    <label for="zodiac-sign">Sign:</label>
+                    <select id="zodiac-sign">
+                        <option>Aries</option><option>Taurus</option><option>Gemini</option>
+                        <option>Cancer</option><option>Leo</option><option>Virgo</option>
+                        <option>Libra</option><option>Scorpio</option><option>Sagittarius</option>
+                        <option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+                    </select>
+                    <button onclick="showHoroscope()">Show</button>
+                </div>
+                <div id="horoscope-result" class="horoscope-result"></div>
+            </div>
+        </section>
+
+        <!-- Zodiac Overview -->
+        <section id="zodiac-overview" class="section">
+            <h2 class="section-title">Zodiac Signs</h2>
+            <div class="zodiac-grid">
+                <!-- Repeat this for all zodiac signs -->
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/aries.svg" alt="Aries" />
+                    <h3>Aries</h3>
+                    <p>Mar 21 – Apr 19</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/taurus.svg" alt="Taurus" />
+                    <h3>Taurus</h3>
+                    <p>Apr 20 – May 20</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/gemini.svg" alt="Gemini" />
+                    <h3>Gemini</h3>
+                    <p>May 21 – Jun 20</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/cancer.svg" alt="Cancer" />
+                    <h3>Cancer</h3>
+                    <p>Jun 21 – Jul 22</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/leo.svg" alt="Leo" />
+                    <h3>Leo</h3>
+                    <p>Jul 23 – Aug 22</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/virgo.svg" alt="Virgo" />
+                    <h3>Virgo</h3>
+                    <p>Aug 23 – Sep 22</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/libra.svg" alt="Libra" />
+                    <h3>Libra</h3>
+                    <p>Sep 23 – Oct 22</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/scorpio.svg" alt="Scorpio" />
+                    <h3>Scorpio</h3>
+                    <p>Oct 23 – Nov 21</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/sagittarius.svg" alt="Sagittarius" />
+                    <h3>Sagittarius</h3>
+                    <p>Nov 22 – Dec 21</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/capricorn.svg" alt="Capricorn" />
+                    <h3>Capricorn</h3>
+                    <p>Dec 22 – Jan 19</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/aquarius.svg" alt="Aquarius" />
+                    <h3>Aquarius</h3>
+                    <p>Jan 20 – Feb 18</p>
+                </div>
+                <div class="zodiac-card">
+                    <img src="https://cdn.jsdelivr.net/gh/astronexus/zodiac-icons/svg/pisces.svg" alt="Pisces" />
+                    <h3>Pisces</h3>
+                    <p>Feb 19 – Mar 20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatibility Checker -->
+        <section id="compatibility" class="section">
+            <h2 class="section-title">Compatibility Checker</h2>
+            <form class="card flex-col" onsubmit="checkCompatibility(event)">
+                <div>
+                    <label>Your Sign:</label>
+                    <select id="sign1" required>
+                        <option>Aries</option><option>Taurus</option><option>Gemini</option>
+                        <option>Cancer</option><option>Leo</option><option>Virgo</option>
+                        <option>Libra</option><option>Scorpio</option><option>Sagittarius</option>
+                        <option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Partner's Sign:</label>
+                    <select id="sign2" required>
+                        <option>Aries</option><option>Taurus</option><option>Gemini</option>
+                        <option>Cancer</option><option>Leo</option><option>Virgo</option>
+                        <option>Libra</option><option>Scorpio</option><option>Sagittarius</option>
+                        <option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+                    </select>
+                </div>
+                <button type="submit" class="compat-btn">Check</button>
+                <div id="compatibility-result" class="compatibility-result"></div>
+            </form>
+        </section>
+
+        <!-- Blog/Articles -->
+        <section id="blog" class="section">
+            <h2 class="section-title">Astrology Insights & Articles</h2>
+            <div class="blog-grid">
+                <article class="card blog-card">
+                    <h3>What Really is a Birth Chart?</h3>
+                    <p>Discover the cosmic map drawn at your exact birth moment and what it means for you.</p>
+                </article>
+                <article class="card blog-card">
+                    <h3>Mercury Retrograde Survival Guide</h3>
+                    <p>Navigating technology fails, communication challenges, and making the most of the cosmos.</p>
+                </article>
+                <article class="card blog-card">
+                    <h3>Your Moon Sign Explained</h3>
+                    <p>Why your moon sign is just as important as your sun sign for your emotional world.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About/FAQ Section -->
+        <section id="about-faq" class="section">
+            <h2 class="section-title">About Astrology</h2>
+            <div class="faq-card card">
+                <p><b>AstroSphere</b> is all about connecting you with the rhythms of the universe.</p>
+                <details>
+                    <summary>What is astrology?</summary>
+                    <p>Astrology is the ancient study of how celestial bodies influence life on Earth.</p>
+                </details>
+                <details>
+                    <summary>How accurate is astrology?</summary>
+                    <p>Astrology offers insight and guidance—your path is always your own to choose.</p>
+                </details>
+                <details>
+                    <summary>Can I get a personal reading?</summary>
+                    <p>Coming soon! Check back for updates on personalized readings and reports.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <form class="card contact-form" onsubmit="submitContact(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+                <div id="contact-message" class="form-message"></div>
+            </form>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="section">
+            <h2 class="section-title">Join Our Cosmic Newsletter</h2>
+            <form class="newsletter-form card" onsubmit="subscribeNewsletter(event)">
+                <input type="email" id="newsletter-email" placeholder="Email Address" required>
+                <button type="submit">Subscribe</button>
+                <div id="newsletter-message" class="form-message"></div>
+            </form>
+        </section>
+
+        <!-- Transits/Calendar -->
+        <section id="transits" class="section">
+            <h2 class="section-title">Upcoming Planetary Transits</h2>
+            <ul class="calendar-list">
+                <li><b>🌕 Nov 27</b> — Full Moon in Gemini</li>
+                <li><b>🔄 Dec 1–21</b> — Mercury Retrograde</li>
+                <li><b>🔥 Nov 12</b> — Mars enters Scorpio</li>
+            </ul>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section testimonial-section">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-cards">
+                <blockquote>
+                    <p>"AstroSphere's daily horoscopes keep me motivated every morning."</p>
+                    <footer>— Alex J.</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"The compatibility checker is so much fun and surprisingly spot on!"</p>
+                    <footer>— Priya D.</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Calculator -->
+        <section id="calculator" class="section">
+            <h2 class="section-title">Astrology Calculator</h2>
+            <form class="card calc-form" onsubmit="calculateChart(event)">
+                <input type="date" id="birth-date" required>
+                <input type="time" id="birth-time" required>
+                <input type="text" id="birth-place" placeholder="Place of Birth" required>
+                <button type="submit">Calculate</button>
+                <div id="calculator-result" class="form-message"></div>
+            </form>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Astrology Website. All rights reserved.</p>
+        <div class="footer-content">
+            &copy; 2025 AstroSphere. All rights reserved.
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
